@@ -1,0 +1,42 @@
+language: bash
+
+before_install:
+  - sudo apt-get update && sudo apt-get install -y shellcheck
+  - sudo apt-get install imagemagick 
+  - sudo apt-get install p7zip-full 
+
+script:
+  - ls -l
+  - shellcheck Task1-ProcessImages.sh
+  - echo Task1
+  - echo "=============================="
+  - bash Task1-ProcessImages.sh -h
+  - bash Task1-ProcessImages.sh -c 50
+  - bash Task1-ProcessImages.sh -r 30
+  - bash Task1-ProcessImages.sh -w hello 50 North
+  - bash Task1-ProcessImages.sh -p hello
+  - bash Task1-ProcessImages.sh -s suff
+  - bash Task1-ProcessImages.sh -t
+  - echo "=============================="
+  - shellcheck Task2-ProcessFile.sh
+  - echo Task2
+  - echo "=============================="
+  - bash Task2-ProcessFile.sh -h
+  - bash Task2-ProcessFile.sh -a
+  - bash Task2-ProcessFile.sh -p
+  - bash Task2-ProcessFile.sh -mn
+  - bash Task2-ProcessFile.sh -ma
+  - echo "=============================="
+  - shellcheck Task3-ProcessFile.sh
+  - echo Task3
+  - bash Task3-ProcessFile.sh -h
+  - bash Task3-ProcessFile.sh -a
+  - bash Task3-ProcessFile.sh -b
+  - bash Task3-ProcessFile.sh -u
+  - bash Task3-ProcessFile.sh -p
+  - bash Task3-ProcessFile.sh -f
+  - bash Task3-ProcessFile.sh -s /images/USA-logosmall.gif
+
+notifications:
+  email:
+    on_success: never
