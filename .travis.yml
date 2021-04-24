@@ -7,7 +7,7 @@ before_install:
 
 script:
   - ls -l
-  - shellcheck Task1-ProcessImages.sh
+  - shellcheck task1.sh
   - echo Task1
   - echo "=============================="
   - bash Task1-ProcessImages.sh -h
@@ -18,7 +18,7 @@ script:
   - bash Task1-ProcessImages.sh -s suff
   - bash Task1-ProcessImages.sh -t
   - echo "=============================="
-  - shellcheck Task2-ProcessFile.sh
+  - shellcheck task2.sh
   - echo Task2
   - echo "=============================="
   - bash Task2-ProcessFile.sh -h
@@ -27,7 +27,7 @@ script:
   - bash Task2-ProcessFile.sh -mn
   - bash Task2-ProcessFile.sh -ma
   - echo "=============================="
-  - shellcheck Task3-ProcessFile.sh
+  - shellcheck task3.sh
   - echo Task3
   - bash Task3-ProcessFile.sh -h
   - bash Task3-ProcessFile.sh -a
